@@ -4,7 +4,23 @@ A Solana Token-2022 transfer hook framework. A transfer hook is a program that T
 
 ## Status on devnet
 
-Deployed on devnet as a reference. The programs and packages are open and buildable today.
+Live on devnet as a reference deployment. Two programs are deployed and open to build against.
+
+- `hukt_hooks` — [`4q7Tgd9A1XfTB2i6WLUjmFXNocw6GrshZwcKgarGV9aC`](https://explorer.solana.com/address/4q7Tgd9A1XfTB2i6WLUjmFXNocw6GrshZwcKgarGV9aC?cluster=devnet)
+- `hukt_registry` — [`HkTcGxnRqmyBqrmMb63cad7sfJjzUo5jY4Y3ErQWBrGv`](https://explorer.solana.com/address/HkTcGxnRqmyBqrmMb63cad7sfJjzUo5jY4Y3ErQWBrGv?cluster=devnet)
+
+Measured on chain so far: 11 transfers hooked, 1 blocked and reverted, 1 attested registry entry. Two packages are published on npm.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#4A4E54','primaryTextColor':'#DDE1E4','primaryBorderColor':'#9AA0A6','lineColor':'#E8B23A','fontFamily':'Saira'}}}%%
+flowchart LR
+    T[Transfer] --> TK[Token-2022]
+    TK -->|Execute CPI| H[Hook program]
+    H -->|rules pass| V[Verified, settles]
+    H -->|rules violated| X[Revert]
+    R[Offchain resolver] -.->|extra accounts| T
+    REG[Registry] -.->|attestation| H
+```
 
 ## Repositories
 
