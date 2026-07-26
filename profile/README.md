@@ -1,5 +1,7 @@
 # HUKT
 
+![The classification yard at night](assets/yard-night-banner.png)
+
 A Solana Token-2022 transfer hook framework. A transfer hook is a program that Token-2022 calls on every transfer of a mint, so a token can enforce its own rules the moment value moves. Think of a large railway classification yard where every wagon is routed and checked before it rolls on. Every transfer gets caught.
 
 ## Status on devnet
