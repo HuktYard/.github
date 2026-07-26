@@ -18,6 +18,12 @@
 
 A Solana Token-2022 transfer hook framework. A transfer hook is a program that Token-2022 calls on every transfer of a mint, so a token can enforce its own rules the moment value moves. Think of a large railway classification yard where every wagon is routed and checked before it rolls on. Every transfer gets caught.
 
+**$HUKT**
+
+```
+HW8cwBUHhciAuZjuetEvhJ1JcrFzZDSLbhPXSj9pump
+```
+
 ## Status on devnet
 
 Live on devnet as a reference deployment. Two programs are deployed and open to build against.
@@ -58,4 +64,4 @@ flowchart LR
 - X: [@huktfun](https://x.com/huktfun)
 - npm: [hukt-cli](https://www.npmjs.com/package/hukt-cli), [@hukt-labs/resolver](https://www.npmjs.com/package/@hukt-labs/resolver)
 
-CA: [CA]
+CA: `HW8cwBUHhciAuZjuetEvhJ1JcrFzZDSLbhPXSj9pump`
